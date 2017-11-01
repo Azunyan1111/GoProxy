@@ -1,0 +1,12 @@
+{
+	"ImportPath": "github.com/Azunyan1111/GoProxy",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/elazarl/goproxy",
+			"Comment": "v1.0-112-ga96fa3a",
+			"Rev": "a96fa3a318260eab29abaf32f7128c9eb07fb073"
+		}
+	]
+}
