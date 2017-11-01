@@ -5,6 +5,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+
+	"io/ioutil"
 )
 
 func main() {
@@ -12,5 +14,9 @@ func main() {
 	proxy.Verbose = true
 
 	log.Println(os.Getenv("PORT"))
+
+	resp, _ := http.Get("https://ipinfo.io")
+	body, _ := ioutil.ReadAll(resp.Body)
+	log.Println(string(body))
 	log.Fatal(http.ListenAndServe(":"+os.Getenv("PORT"), proxy))
 }
